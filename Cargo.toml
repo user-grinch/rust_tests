@@ -7,6 +7,14 @@ edition = "2021"
 name = "test_dll"
 crate-type = ["cdylib"]
 
-[dependencies]
-toy-arms = {version = "0.9.*", features = ["external"]}
-libloading = "0.7"
+[dependencies.windows]
+version = "0.37.0"
+features = [
+    "alloc",
+    "Data_Xml_Dom",
+    "Win32_Foundation",
+    "Win32_Security",
+    "Win32_System_Threading",
+    "Win32_UI_WindowsAndMessaging",
+    "Win32_System_SystemServices",
+]
